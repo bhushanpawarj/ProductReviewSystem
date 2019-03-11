@@ -19,9 +19,12 @@ import { AngularFireStorageModule } from "@angular/fire/storage";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AddProductComponent } from './add-product/add-product.component';
 
+<<<<<<< HEAD
 import { ReactiveFormsModule } from '@angular/forms';
 
 
+=======
+>>>>>>> a2bca9b393626d0760e7852e55b50798fb3625f8
 export const firebaseConfig = {
   apiKey: "AIzaSyDJxzSvzWHJCywVbHWnxl20JcSa2iiM_qw",
   authDomain: "angularfirebaseauthproject.firebaseapp.com",
@@ -50,8 +53,12 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
+<<<<<<< HEAD
     AngularFireStorageModule,
     ReactiveFormsModule
+=======
+    AngularFireStorageModule
+>>>>>>> a2bca9b393626d0760e7852e55b50798fb3625f8
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,8 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { ReactiveFormsModule,FormControl, Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { AngularFireAuth } from "@angular/fire/auth";
 import { Router } from '@angular/router';
 import * as firebase from 'firebase';
+=======
+import { FormControl, Validators } from '@angular/forms';
+import * as firebase from "firebase";
+import { AngularFireAuth } from "@angular/fire/auth";
+import { Router } from '@angular/router';
+>>>>>>> a2bca9b393626d0760e7852e55b50798fb3625f8
 
 @Component({
   selector: "app-login",
@@ -10,6 +17,7 @@ import * as firebase from 'firebase';
   styleUrls: ["./login.component.css"]
 })
 export class LoginComponent implements OnInit {
+<<<<<<< HEAD
   constructor(public af: AngularFireAuth, private router: Router,private fb: FormBuilder) {}
   error: any;
 
@@ -23,6 +31,26 @@ export class LoginComponent implements OnInit {
   */
   hide = true;
 
+=======
+  constructor(public af: AngularFireAuth, private router: Router) {}
+  error: any;
+
+  email = new FormControl("", [Validators.required, Validators.email]);
+  password = new FormControl("", [Validators.required]);
+  hide = true;
+
+  getEmailErrorMessage() {
+    return this.email.hasError("required")
+      ? "You must enter a value"
+      : this.email.hasError("email")
+      ? "Not a valid email"
+      : "";
+  }
+
+  getPasswordErrorMessage() {
+    return this.password.hasError("required") ? "You must enter a value" : "";
+  }
+>>>>>>> a2bca9b393626d0760e7852e55b50798fb3625f8
 
   googleLogin(){
     var provider = new firebase.auth.GoogleAuthProvider();
@@ -38,6 +66,7 @@ export class LoginComponent implements OnInit {
       }
     )
 
+<<<<<<< HEAD
   }
 
   gitLogin(){
@@ -200,4 +229,9 @@ validationMessages = {
     this.buildForm();
     this.buildLoginForm();
   }
+=======
+
+  }
+  ngOnInit() {}
+>>>>>>> a2bca9b393626d0760e7852e55b50798fb3625f8
 }
