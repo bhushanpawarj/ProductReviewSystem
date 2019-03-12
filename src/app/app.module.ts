@@ -20,6 +20,7 @@ import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AddProductComponent } from './add-product/add-product.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 
 export const firebaseConfig = {
@@ -41,7 +42,8 @@ export const firebaseConfig = {
     AboutComponent,
     ContactComponent,
     ProductListComponent,
-    AddProductComponent
+    AddProductComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
